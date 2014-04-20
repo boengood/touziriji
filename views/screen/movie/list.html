@@ -1,0 +1,23 @@
+<% include ../../header.html %>
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>影片名称</th>
+            <th>清晰程度</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+        	<% for(i=0 ;i < movieList.length;i++) {%>
+          <tr>
+            <td><%= movieList[i]._id%></td>
+            <td><%= movieList[i].name%>(<%= movieList[i].alias%>)</td>
+            <td></td>
+            <!--  <td><% for(j=0 ;j <movieList[i].alias.length;j++) {%> <%=movieList[i].alias[j] %> <% }%></td> -->
+            <td><%= movieList[i].name%></td>
+          </tr>
+          <% }%>
+        </tbody>
+      </table>
+<% include ../../footer.html %>
